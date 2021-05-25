@@ -41,7 +41,7 @@ jobs:
     - name: Install dependencies (MacOS))
       run: |
         brew update
-        brew cask install android-ndk
+        brew cask install android-ndk@19.3
         export NDK_ROOT="$(brew --prefix)/share/android-ndk"
         echo "::set-env name=NDK_ROOT::$NDK_ROOT"
       if: matrix.os == 'macos-latest'
